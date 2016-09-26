@@ -50,6 +50,30 @@ window.onload = function(){
   // c.stroke();
   c.fill();
 
+  var posX = 0;
+  var posY = 300;
+  var radius = 50;
+  setInterval(function(){
+    if(posX > canvas.width-40){
+      posY += 3;
+      posX = canvas.width-40;
+      if(posY> canvas.height){
+        // posY = canvas.height - 40;
+        c.fillStyle = "white";
+        c.font = "30px Helvetica";
+        c.fillText("Bye ball!", 250,80);
+      }
+    }
+    posX += 2;
+    radius -= .1;
+    c.fillStyle = "rgba(100,0,0,0.3)";
+    c.fillRect(0, 0, canvas.width, canvas.height);
+
+    c.fillStyle = "orange";
+    c.beginPath();
+    c.arc(posX, posY, radius, 0, Math.PI * 2, false);
+    c.fill();
+  }, 30)
 
 })
 
