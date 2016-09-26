@@ -35,9 +35,20 @@ window.onload = function(){
   c.lineTo(150, 195);
   c.lineTo(125, 195);
   c.lineTo(175, 195);
+  // c.closePath();
+  // c.fill();
   c.stroke();
 
+  c.fillStyle = "white";
+  c.font = "30px Helvetica";
+  c.fillText("Test font", 250,80);
 
+  c.fillStyle = "orange";
+  c.strokeStyle = "red";
+  c.beginPath();
+  c.arc(100, 300, 50, 0, Math.PI, false);
+  // c.stroke();
+  c.fill();
 
 
 })
